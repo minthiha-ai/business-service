@@ -30,3 +30,10 @@ Route::middleware('auth:api')->group(function () {
     Route::put('/review-comments/{id}', [ReviewCommentController::class, 'update']);
     Route::delete('/review-comments/{id}', [ReviewCommentController::class, 'destroy']);
 });
+
+Route::middleware('verify.api.signature')->group(function () {
+    //This route is testing purpose only,if you want to delete, you can
+    Route::get('test/microservice',function (){
+        return response()->json(['status'=>200,'msg'=>'Connection successful']);
+    });
+});

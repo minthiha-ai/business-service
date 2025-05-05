@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'debug' => (bool) env('APP_DEBUG', false),
+    'debug' => (bool)env('APP_DEBUG', false),
 
     /*
     |--------------------------------------------------------------------------
@@ -122,5 +122,16 @@ return [
         'driver' => env('APP_MAINTENANCE_DRIVER', 'file'),
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
+
+    'api' => [
+        [
+            'key' => 'H4SJMIHK0DLOBQTZUWQWFJQKFAVE5AQV',
+            'secret' => 'RnrggCUTV1LCkZTphlBFg1pIqN6azSs9S8S4DHn572V6P2zmGSHa6zRIbfBAokNM'
+        ],
+        [
+            'key' => 'AG8AQAEQGJVDO4WWKNACWXW0JWHYN8AQ',
+            'secret' => 'EHkePjHzCm8fQeLsxm9OuJRlFI5OuXUpa2LvtFmwsaSoyNQDVqKnLWSIKK6Dvofk'
+        ]
+    ]
 
 ];

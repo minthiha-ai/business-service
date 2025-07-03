@@ -14,6 +14,7 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->alias([
             'verify.api.signature' => \App\Http\Middleware\VerifyApiSignature::class,
+            'check.auth.token' => \App\Http\Middleware\CheckAuthToken::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {

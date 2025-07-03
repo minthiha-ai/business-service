@@ -33,7 +33,11 @@ Route::middleware('auth:api')->group(function () {
 
 Route::middleware('verify.api.signature')->group(function () {
     //This route is testing purpose only,if you want to delete, you can
-    Route::get('test/microservice',function (){
-        return response()->json(['status'=>200,'msg'=>'Connection successful']);
+   Route::post('admin/business/store',[BusinessProfileController::class, 'store']);
+});
+
+Route::middleware(['check.auth.token'])->group(function () {
+    Route::get('business/auth/test',function (){
+        return response()->json(['token'=>'test']);
     });
 });
